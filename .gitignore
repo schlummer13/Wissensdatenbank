@@ -1,0 +1,14 @@
+# Ignoriere temporäre Dateien
+*.log
+*.tmp
+*.DS_Store
+
+# Ignoriere virtuelle Umgebungen und Build-Verzeichnisse
+env/
+__pycache__/
+build/
+dist/
+
+# Ignoriere sensible Konfigurationsdateien
+config.yaml
+.secret-key

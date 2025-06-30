@@ -1,0 +1,343 @@
+site_name: Wissensdatenbank
+site_description: Wissensdatenbank für die Entwicklung von Software
+site_author: "Florian Fenzl"
+site_url: https://wiki.somebot.de
+copyright: >
+  <a href="https://www.somebot.de/impressum.html">Impressum</a> | Copyright &copy; 2025 Florian Fenzl
+
+
+repo_url: https://github.com/schlummer13
+extra:
+  homepage: https://www.somebot.de
+  generator: false
+  consent:
+    title: Cookies
+    description: >- 
+      Ich verwende aussschließlich technisch notwendige Cookies.
+    actions:
+      - accept
+
+
+plugins:
+  - search:
+      lang: de
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+      
+
+theme:
+  logo: images/logo_white.png
+  favicon: images/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  highlightjs: true
+  language: de
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: blue grey
+      scheme: default
+      toggle:
+        
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.top
+    - tov.integrate
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+  font:
+    text: Montserrat
+    code: Roboto Mono
+
+nav:
+  - Home: 
+      - Willkommen: index.md
+      - News: news.md
+      - Über mich: about.md
+  - HTML:
+      - Einführung: html/einführung.md
+      - Basics: html/basics.md
+      - HTML-Tags: html/tags.md
+      - Einfache Tags: 
+          - Überschrift: html/simple/h.md
+          - Links: html/simple/a.md
+          - Absatz: html/simple/p.md
+          - Text: html/simple/span.md
+          - String: html/simple/strong.md
+          - Blockquote: html/simple/blockquote.md
+          - Quote: html/simple/q.md
+          - Zeilenumbruch: html/simple/br.md
+          - Trennlinie: html/simple/hr.md
+          - Mark: html/simple/mark.md
+          - Time: html/simple/time.md
+          - Abkürzung: html/simple/abbr.md
+          - Quelle: html/simple/cite.md
+          - Definition: html/simple/dfn.md
+          - Code: html/simple/code.md
+          - Variablen: html/simple/var.md
+          - Tastertur-Eingaben: html/simple/kbd.md
+          - Konsolen-Ausgaben: html/simple/samp.md
+
+
+      - Layout:
+          - Header: html/page/header.md
+          - Navigation: html/page/nav.md
+          - Aside: html/page/aside.md
+          - Container: html/page/div.md
+          - Main: html/page/main.md
+          - Article: html/page/article.md
+          - Section: html/page/section.md
+          - Footer: html/page/footer.md
+      - Forms:
+          - Form: html/form/form.md
+          - Input: html/form/input.md
+          - Label: html/form/label.md
+          - Button: html/form/button.md
+          - Select: html/form/select.md
+          - Textarea: html/form/textarea.md
+          - Fieldset: html/form/fieldset.md
+          - Datalist: html/form/datalist.md
+      - Daten: 
+          - Listen: html/daten/listen.md
+          - Tabellen: html/daten/table.md
+      - Externe Medien:
+          - Bilder: html/extern/img.md
+          - Picture: html/extern/picture.md
+          - Video: html/extern/video.md
+          - Audio: html/extern/audio.md
+          - iFrame: html/extern/iframe.md
+          - Dateien: html/extern/embed.md
+      - Semantik:
+          - Was ist Semantik?: html/semantik/übersicht.md
+          - Nav vs. Section: html/semantik/navsection.md
+      - Script: html/js.md
+      - Style: html/style.md
+      - Link: html/link.md
+      - Meta: html/meta.md
+      - SEO-Meta: html/seo-meta.md
+      - CSP: html/csp.md
+  - CSS:
+      - Einführung: css/einführung.md
+      - Box-Modell: css/box-modell.md
+      - Selektoren: css/selektoren.md
+      - Positionierung: css/position.md
+      - Display-Typen: css/display-typen.md
+      - Layoutstrategien: css/layoutstrategie.md
+      - Responsive Design: css/responsive.md
+      - Flexbox: css/flexbox.md
+      - Grid: css/grid.md
+      - Grid vs. Flexbx: css/gridvsflexbox.md
+      - Tips & Tricks: css/tips&tricks.md
+      - Cheatsheet: css/cheatsheet.md
+  - JavaScript:
+      - Einführung: js/einführung.md
+      - Variablen & Datentypen: js/vardata.md
+      - Operatoren: js/operatoren.md
+      - Funktionen: js/funktionen.md
+      - Objekte: 
+          - Objekte: js/objekte/object.md
+          - Eigenschaften: js/objekte/eigenschaften.md
+          - Methoden: js/objekte/methoden.md
+          - Anzeigen: js/objekte/anzeigen.md
+          - Constructors: js/objekte/constructor.md
+      - Array:
+          - Arrays: js/array/array.md
+          - Methoden: js/array/methoden.md
+          - Suche: js/array/search.md
+          - Sortieren: js/array/sort.md
+          - Iteration: js/array/iteration.md
+          - Const: js/array/const.md
+      - Dates: js/dates.md
+      - Math: js/math.md
+      - If Else: js/ifelse.md
+      - For Loop: js/for.md
+      - DOM:
+          - Einführung: js/dom/einführung.md
+          - Methoden: js/dom/methoden.md
+          - Document: js/dom/document.md
+          - Element: js/dom/elemente.md
+          - HTML: js/dom/html.md
+          - CSS: js/dom/css.md
+          - Forms: js/dom/forms.md
+          - Animation: js/dom/animation.md
+          - Events: js/dom/events.md
+          - Event Listeners: js/dom/eventlistener.md
+          - Navigation: js/dom/navigation.md
+          - Nodes: js/dom/nodes.md
+          - Node lists & Collections: js/dom/collections.md
+          - Shadow DOM: js/dom/shadow.md
+          - Mutation Observer: js/dom/observer.md
+      - BOM:
+        - Einführung: js/bom/einführung.md
+        - Window: js/bom/window.md
+        - Screen: js/bom/screen.md
+        - Location: js/bom/location.md
+        - History: js/bom/history.md
+        - Navigator: js/bom/navigator.md
+        - POPUP: js/bom/popup.md
+        - Timing: js/bom/timing.md
+        - Geolocation: js/bom/geolocation.md
+        - Cookies: js/bom/cookies.md
+        - Local Storage: js/bom/localstorage.md
+        - Session Storage: js/bom/sessionstorage.md
+      - Klassen: js/klasse.md
+      - HTTP Anfragen: js/fetch.md
+      - Websocket: js/websocket.md
+  - Python:
+      - Einführung: python/einführung.md
+      - Syntax: python/syntax.md
+      - Kommentare: python/kommentare.md
+      - Variablen: python/variablen.md
+      - Global: python/global.md
+      - Datentypen: python/datentypen.md
+      - Typing: python/typing.md
+      - Operatoren: python/operatoren.md
+      - Strings:
+            - Slicing: python/strings/slicing.md
+            - Modification: python/strings/modify.md
+            - Concat: python/strings/concat.md
+            - Format: python/strings/format.md
+            - Escape: python/strings/escape.md
+            - Methoden: python/strings/methoden.md
+      - Listen:
+            - Einführung: python/listen/einführung.md
+            - Zugriff: python/listen/access.md
+            - Bearbeiten: python/listen/change.md
+            - Hinzufügen: python/listen/add.md
+            - Entfernen: python/listen/remove.md
+            - Loops: python/listen/loop.md
+            - Comprehension: python/listen/comprehension.md
+            - Sortieren: python/listen/sort.md
+            - Kopieren: python/listen/copy.md
+            - Zusammenführen: python/listen/join.md
+            - Methoden: python/listen/methoden.md
+      - Tuple:
+            - Einführung: python/tuples/einführung.md
+            - Zugriff: python/tuples/access.md
+            - Bearbeiten: python/tuples/update.md
+            - Auspacken: python/tuples/unpack.md
+            - Loop: python/tuples/loop.md
+            - Zusammenführen: python/tuples/join.md
+            - Methoden: python/tuples/methoden.md
+      - Sets:
+            - Einführung: python/sets/einführung.md
+            - Hinzufügen: python/sets/add.md
+            - Entfernen: python/sets/remove.md
+            - Loop: python/sets/loop.md
+            - Zusammenführen: python/sets/join.md
+            - Methoden: python/sets/methoden.md
+      - Dictionary:
+            - Einführung: python/dicts/einführung.md
+            - Zugriff: python/dicts/access.md
+            - Hinzufügen: python/dicts/add.md
+            - Bearbeiten: python/dicts/change.md
+            - Entfernen: python/dicts/remove.md
+            - Loops: python/dicts/loop.md
+            - Kopieren: python/dicts/copy.md
+            - Verschachtelt: python/dicts/nested.md
+            - Comprehension: python/dicts/comprehension.md
+            - Methoden: python/dicts/methoden.md
+  - Datenbank:
+      - Einführung: datenbank/einführung.md
+      - SQL:
+          - Einführung: datenbank/SQL/einführung.md
+      - noSQL:
+          - Einführung: datenbank/noSQL/einführung.md
+  - Scraping:
+      - Einführung: scraping/einführung.md
+  - FastAPI:
+      - Einführung: fastapi/einführung.md
+      - REST:
+          - Einführung: fastapi/REST/einführung.md
+          - Grundlagen: fastapi/REST/grundlagen.md
+  - Data Science:
+      - Einführung: data_science/einführung.md
+      - Matplotlib:
+          - Einführung: data_science/matplotlib/einführung.md
+      - Numpy:
+          - Einführung: data_science/numpy/einführung.md
+      - Pandas:
+          - Einführung: data_science/pandas/einführung.md
+      - Scikit Learn:
+          - Einführung: data_science/scikitlearn/einführung.md
+  - ML/DL(KI):
+    - Machine Learning:
+        - Einführung: machine_learning/einführung.md
+    - Deep Learning:
+        - Einführung: deeplearning/einführung.md
+        - Convolutional Neural Network:
+            - Einführung: deeplearning/cnn/einführung.md
+        - Recurrent Neural Network:
+            - Einführung: deeplearning/rnn/einführung.md
+        - Neuronale Netze:
+            - Einführung: deeplearning/neuronalenetze/einführung.md
+        - PyTorch:
+            - Einführung: deeplearning/pytorch/einführung.md
+        - Tensorflow:
+            - Einführung: deeplearning/tensorflow/einführung.md
+  - Software:
+      - Cleancode: software/cleancode.md
+      - Modular: software/modular.md
+      - Solid: software/solid.md
+  - Sicherheit:
+      - Auth: Sicherheit/auth.md
+      - Cors: Sicherheit/cors.md
+      - CSRF: Sicherheit/csrf.md
+      - HTTPS: Sicherheit/https.md
+      - XSS: Sicherheit/xss.md   
+      
+  
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  
+extra_javascript:
+  - https://.cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
+
