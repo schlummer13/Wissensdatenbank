@@ -71,7 +71,6 @@ theme:
 nav:
   - Home: 
       - Willkommen: index.md
-      - News: news.md
       - Über mich: about.md
   - HTML:
       - Einführung: html/einführung.md
