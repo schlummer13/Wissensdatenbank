@@ -2,7 +2,7 @@
 *.log
 *.tmp
 *.DS_Store
-
+site
 
 # Ignoriere virtuelle Umgebungen und Build-Verzeichnisse
 env/
